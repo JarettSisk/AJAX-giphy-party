@@ -1,0 +1,77 @@
+
+body {
+    margin: 0;
+    background-color: rgb(19, 21, 49);
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gif {
+    width: 400px;
+    border: 2px solid black;
+    margin: 15px 0;
+}
+
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+input {
+    margin: 0 10px;
+    font-size: 1.3rem;
+    
+}
+input:hover::placeholder {
+    color: rgb(255, 255, 255);
+}
+input::placeholder {
+    color: rgb(170, 170, 170);
+    
+}
+
+
+button {
+    margin: 0 10px;
+}
+
+.gif-search-form_submit-button {
+    background-color: rgb(95, 250, 95);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+.gif-search-form_submit-button:hover {
+    background-color: rgb(177, 252, 177);
+}
+
+.remove-btn {
+    background-color: rgb(250, 95, 95);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+.remove-btn:hover {
+    background-color: rgb(253, 158, 158);
+}

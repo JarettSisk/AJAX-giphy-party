@@ -9,8 +9,13 @@ const removeButton = document.querySelector(".remove-btn");
 // API Request
 async function getGif() {
     try {
-      const response = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${form.searchInput.value}&api_key=${apiKey}`)
-      return response;
+      const response = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${form.searchInput.value}&api_key=${apiKey}`,{
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+        },
+      });
+      return response.json();
     } catch (error) {
       console.error(error);
     }
@@ -21,10 +26,10 @@ form.addEventListener("submit", async function(e) {
     e.preventDefault();
     
     let res = await getGif(); // GET the gif from the Giphy API
-
+    console.log(res)
     // Create a new img EL and append it to the gif container
     const newImg = document.createElement("img");
-    newImg.setAttribute("src", `${res.data.data.fixed_height_downsampled_url}`);
+    newImg.setAttribute("src", `${res.data.images.downsized_medium.url}`);
     newImg.classList.add("gif");
     const divContainer = document.querySelector(".gif-container");
     divContainer.append(newImg);

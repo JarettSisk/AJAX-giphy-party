@@ -9,7 +9,7 @@ const removeButton = document.querySelector(".remove-btn");
 // API Request
 async function getGif() {
     try {
-      const response = await fetch(`http://api.giphy.com/v1/gifs/random?tag=${form.searchInput.value}&api_key=${apiKey}`)
+      const response = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${form.searchInput.value}&api_key=${apiKey}`)
       return response;
     } catch (error) {
       console.error(error);

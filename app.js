@@ -26,7 +26,6 @@ form.addEventListener("submit", async function(e) {
     e.preventDefault();
     
     let res = await getGif(); // GET the gif from the Giphy API
-    console.log(res)
     // Create a new img EL and append it to the gif container
     const newImg = document.createElement("img");
     newImg.setAttribute("src", `${res.data.images.downsized_medium.url}`);
